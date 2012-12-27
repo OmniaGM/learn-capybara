@@ -1,0 +1,10 @@
+th.posts{
+	padding: 12px 17px 12px 17px;
+	font-weight: normal;
+	font-size: 14px;
+	border-bottom: 1px dashed ;
+}
+td.posts {
+	padding: 7px 17px 7px 17px;
+}
+	
