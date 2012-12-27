@@ -1,0 +1,1 @@
+var search_data = {"index":{"searchIndex":["readme"],"longSearchIndex":[""],"info":[["README","","README_rdoc.html","","<p>Getting Started with capybara\n<p>Learning how to use <strong>rspec</strong>, <strong>capybara</strong> and\n<strong>webkit</strong> with <strong>rails</strong>\n<p>1. Creating Project …\n"]]}}

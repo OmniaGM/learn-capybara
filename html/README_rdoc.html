@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>README - App Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./RdocTutorial.html">RdocTutorial</a>
+  
+    <li><a href="./RdocTutorial/Application.html">RdocTutorial::Application</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./CommentsHelper.html">CommentsHelper</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./Post.html">Post</a>
+  
+    <li><a href="./PostsController.html">PostsController</a>
+  
+    <li><a href="./PostsHelper.html">PostsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<h2 id="label-Getting+start+with+Rdoc.">Getting start with Rdoc.</h2>
+
+<pre>pla</pre>
+
+<h2 id="label-Usage+%3A">Usage :</h2>
+
+<pre>rdoc &lt;options&gt; [name...]</pre>
+<ul><li>
+<p>If you want create your documentation in file <strong>doc</strong>, you
+will use this command :</p>
+</li></ul>
+
+<pre>rdoc --op doc</pre>
+<ul><li>
+<p>You can make this slightly more useful for your readers by having the index
+page contain the documentation for the primary file. In our case, we could
+type</p>
+</li></ul>
+
+<pre>rdoc --main README.rdoc</pre>
+
+<h4 id="label-Options+%3A">Options :</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>–all
+<dd>
+<p>include protected and private methods in the output (by default only public
+methods are included)</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–main name
+<dd>
+<p>set the class, module, or file to appear on the index page</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–exclude pattern
+<dd>
+<p>exclude files and directories matching this pattern from processing</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–quiet
+<dd>
+<p>do not display progress messages</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–one-file
+<dd>
+<p>place all the output into a single file inlined</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–op dir
+<dd>
+<p>set the output directory to dir (the default is the directory “doc”)</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–opname name
+<dd>
+<p>set the output name (has no effect for HTML)</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–charset charset
+<dd>
+<p>Set the character set for the generated HTML.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–fmt fmt
+<dd>
+<p>generate output in a particular format.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–include dir,…
+<dd>
+<p>specify one or more directories to be searched when satifying given. The
+directory containing the file currently being processed is always searched.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–inline-source
+<dd>
+<p>By default, the source code of methods is shown in a popup. With this
+option, it’s displayed inline.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–show-hash
+<dd>
+<p>A name of the form name in a comment is a possible hyperlink to an instance
+method name. When displayed, the ‘#’ is removed unless this option is
+specified</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–template name
+<dd>
+<p>specify an alternate template to use when generating output (the default is
+‘standard’). This template should be in a directory accessible via $: as
+rdoc/generators/xxxx_template, where ‘xxxx’ depends on the output
+formatter.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>–diagram
+<dd>
+<p>include diagrams showing modules and classes. This is currently an
+experimental feature, and may not be supported by all output templates.</p>
+</dd></dl>
+</li></ul>
+
+<h2 id="label-MarkUp+%3A">MarkUp :</h2>
+<dl class="rdoc-list label-list"><dt>Text Markup
+<dd>
+<p><strong>Bold</strong>, <em>Italic</em>, <code>Typewriter</code> Text</p>
+
+<h4 id="label-Bold">Bold</h4>
+
+<pre>*word*    displays word in a bold font</pre>
+
+<p><strong>'*'</strong> just used for one word <strong>but</strong> if it text
+use</p>
+
+<pre>&lt;b&gt;text&lt;/b&gt;</pre>
+
+<h4 id="label-Italic">Italic</h4>
+
+<pre>_word_    displays word in an emphasized font</pre>
+
+<p><strong>'_'</strong> just used for one word <strong>but</strong> if it text
+use</p>
+
+<pre>&lt;em&gt;text&lt;/em&gt;</pre>
+
+<h4 id="label-Code+Font">Code Font</h4>
+
+<pre>+word+    displays word in a code font</pre>
+
+<p><strong>'+'</strong> just used for one word <strong>but</strong> if it text
+use</p>
+
+<pre>&lt;tt&gt;text&lt;/tt&gt;</pre>
+</dd><dt>Headers
+<dd>
+<p>Number of <strong>=</strong> equal header type.</p>
+
+<pre>=== Headers</pre>
+
+<p>This mean :</p>
+
+<pre>&lt;h3 id=&quot;label-Headers&quot;&gt;Headers&lt;/h3&gt;</pre>
+</dd><dt>Lists
+<dd>
+<h4 id="label-Simple+Lists">Simple Lists</h4>
+
+<p>If a paragraph starts with a “*”, “-”, “&lt;digit&gt;.” or
+“&lt;letter&gt;.”, then it is taken to be the start of a list.</p>
+
+<pre>* First Item is an indented, unordered list
+* Second Item in that list
+
+- First Item is an dented, unordered list
+- Second Item in that list
+
+1. This is an indented, numbered list.
+2. This is the second item in that list
+
+a. This is an indented, numbered list.
+b. This is the second item in that list</pre>
+</dd></dl>
+
+<h2 id="label-Notice+%3A+">Notice : </h2>
+<ul><li>
+<p>No linebreaks</p>
+</li><li>
+<p>That blank lines are ignored in labeled lists</p>
+</li><li>
+<p>Let white space after markup</p>
+</li></ul>
+
+<h2 id="label-Ref+%3A+">Ref : </h2>
+<ul><li>
+<p><a href="http://rdoc.rubyforge.org/RDoc/">rdoc.rubyforge.org/RDoc/</a></p>
+</li><li>
+<p><a href="http://rdoc.sourceforge.net/doc/">rdoc.sourceforge.net/doc/</a></p>
+</li></ul>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
