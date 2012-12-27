@@ -58,7 +58,6 @@ Set <b><tt>Gemfile</b></tt> and <b><tt>spec_helper.rb</b></tt>
   Add <b><tt>capybara-webkit</b></tt> and <b><tt>database-cleaner</b></tt>, You didn't need capybara any more in your <tt>Gemfile</tt>
   
       gem "capybara-webkit", :group => :test
-      gem 'launchy', :group => :test
       gem 'database_cleaner', :group => :test
   <b>Note :</b>
   Ensured that you installed <b><tt>libqt4-dev libqtwebkit-dev</b></tt> before <b><tt>bundle</b></tt>
