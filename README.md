@@ -61,7 +61,7 @@ Set <b><tt>Gemfile</b></tt> and <b><tt>spec_helper.rb</b></tt>
       gem 'launchy', :group => :test
       gem 'database_cleaner', :group => :test
   <b>Note :</b>
-   Be ensure that you install <b><tt>libqt4-dev libqtwebkit-dev</b></tt> before <b><tt>bundle</b></tt>
+  Ensured that you installed <b><tt>libqt4-dev libqtwebkit-dev</b></tt> before <b><tt>bundle</b></tt>
   
     sudo apt-get install libqt4-dev libqtwebkit-dev
 
