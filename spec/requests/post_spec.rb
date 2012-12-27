@@ -19,6 +19,11 @@ describe "post" do
 			page.should have_content("Post was successfully created.")
 			click_link "Back"
 			page.should have_content("Listing posts")
+			# debugger
+			# print page.html
+			within_table('posts') do
+     			page.has_css?('table td.posts')
+		    end
 		end
 
 		it "creats post unsuccessfully" do
