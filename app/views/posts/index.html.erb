@@ -1,10 +1,11 @@
 <h1>Listing posts</h1>
+  <%= stylesheet_link_tag    "posts", :media => "all" %>
 
-<table id = 'posts'>
-  <tr>
-    <th>Name</th>
-    <th>Title</th>
-    <th>Content</th>
+<table id = 'posts' >
+  <tr class = 'posts'>
+    <th class = 'posts'><b>Name</b></th>
+    <th class = 'posts'><b>Title</b></th>
+    <th class = 'posts'><b>Content</b></th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,9 +13,9 @@
 
 <% @posts.each do |post| %>
   <tr>
-    <td><%= post.name %></td>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
+    <td class = 'posts'><%= post.name %></td>
+    <td class = 'posts'><%= post.title %></td>
+    <td class = 'posts'><%= post.content %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
