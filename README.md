@@ -55,10 +55,15 @@ Set <b><tt>Gemfile</b></tt> and <b><tt>spec_helper.rb</b></tt>
   
 ####  Gemfile
   
-  Add <b><tt>capybara-webkit</b></tt> and <b><tt>database-cleaner</b></tt>
+  Add <b><tt>capybara-webkit</b></tt> and <b><tt>database-cleaner</b></tt>, You didn't need capybara any more in your <tt>Gemfile</tt>
   
       gem "capybara-webkit", :group => :test
+      gem 'launchy', :group => :test
       gem 'database_cleaner', :group => :test
+  <b>Note :</b>
+   Be ensure that you install <b><tt>libqt4-dev libqtwebkit-dev</b></tt> before <b><tt>bundle</b></tt>
+  
+    sudo apt-get install libqt4-dev libqtwebkit-dev
 
 ####  <tt> spec/spec_helper.rb </tt> configuration
   Now, set <b><tt>capybara-webkit</b></tt> config
@@ -91,11 +96,14 @@ Set <b><tt>Gemfile</b></tt> and <b><tt>spec_helper.rb</b></tt>
 #### Using webkit
   Use <b><tt> :js => true </b></tt>.
   
-    it "supports js", :js => true do
-        visit '/'
-        click_link "test js"
-        page.should have_content("js works")
-      end
+    describe "after clicking about link", :js => true do
+    	before :each do
+		   click_link('about')
+		end
+		it "displays posts" do
+			page.should have_selector("h3", text: "This is simple app to learn capybara.")
+		end
+	end
 
 ### 6. Finally run Rspec
 ========================
