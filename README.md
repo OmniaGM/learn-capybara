@@ -14,6 +14,7 @@ Learning how to use [*rspec*](http://rubydoc.info/gems/rspec-rails/frames), [*ca
 ### 2. Rspec installation
 =========================
 Now Install <b><tt>Rspec</b></tt>  
+
     rails generate rspec:install
 
 ### 3. Setup capybara 
