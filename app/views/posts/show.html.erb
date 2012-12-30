@@ -14,13 +14,17 @@
   <b>Content:</b>
   <%= @post.content %>
 </p>
+<hr>
 
-<h2>Comments</h2>
-<%= render @post.comments %>
-
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
- 
+<div id = "comments">
+	<h2>Comments</h2>
+	<%= render @post.comments %>
+</div>
+<hr>
+<div id = "comments_form">
+	<h2>Add a comment:</h2>
+	<%= render "comments/form" %>
+</div>
 <br />
 
 
